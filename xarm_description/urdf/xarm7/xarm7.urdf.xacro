@@ -10,10 +10,8 @@
     joint6_lower_limit:=${-1.69297}  joint6_upper_limit:=${pi}
     joint7_lower_limit:=${-2.0*pi}  joint7_upper_limit:=${2.0*pi}
     model_num:=0
-    inertial_params_filename:='' kinematics_params_filename:=''
-    collision_mesh_scale:=1.0"
+    inertial_params_filename:='' kinematics_params_filename:='' "
     >
-    <!-- set collision_mesh_scale to 1.002 after meshes are reduced -->
 
     <!-- define property -->
     <xacro:if value="${model_num >= 1305 and model_num != 1380}">
