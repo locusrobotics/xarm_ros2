@@ -24,6 +24,7 @@
     </xacro:if>
     <xacro:unless value="${model_num >= 1305 and model_num != 1380}">
       <xacro:property name="visual_dir" value="xarm7/visual"/>
+      <!-- The collision shapes have been simplified and inflated by 2 mm -->
       <xacro:property name="collision_dir" value="xarm7/collision"/>
       <xacro:property name="add_mesh_suffix" value="true"/>
       <xacro:property name="collison_mesh_suffix" value="stl"/>
