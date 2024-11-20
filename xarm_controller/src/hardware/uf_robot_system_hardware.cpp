@@ -356,6 +356,15 @@ namespace uf_robot_hardware
         }
         initialized_ = true;
         
+        // Warnings will fly when below 80Hz
+        const auto max_period = 0.0125;
+        if (period.seconds() > max_period)
+        {
+          RCLCPP_WARN(
+            LOGGER, "Update frequency has fallen below %0.1f: Actual: %0.1f", 1.0 / max_period,
+            1 / period.seconds());
+        }
+        
         // std::string pos_str = "[ ";
         // std::string vel_str = "[ ";
         // for (int i = 0; i < position_cmds_.size(); i++) { 
